@@ -7,7 +7,12 @@ from search_functions import*
 
 app = Flask(__name__)
 
-es, es_index = create_elastic_search_index()
+#es, es_index = create_elastic_search_index()
+try:
+    es = Elasticsearch()
+    print("Connected", es.info())
+except Exception as ex:
+    print("Error:", ex)
 
 @app.route('/query', methods=['GET', 'POST'])
 def user_query():
@@ -20,4 +25,4 @@ def display_results():
     if request.method == "POST":
         query_text = request.form['text']
         dict = search_elastic_index(query_text, es)
-    return render_template("hello.html", output = dict)
+    return render_template("search.html", output = dict)

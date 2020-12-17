@@ -13,6 +13,11 @@ body {
 div.container {
   background: linear-gradient(to bottom, #A1FFCE 0%, #FAFFD1 100%);
 }
+
+mark {
+  background-color: yellow;
+  font-style: italic;
+}
 </style>
 <div class="container">
     <div class="row">
@@ -25,8 +30,12 @@ div.container {
                 <div>
                     <div>
                         <h4> Title: {{value[0]}}</h4>
-                        <p><a href="{{value[2]}}">Go to post!</a></p>
-                        <h10> Post Context: {{value[1]}}</h10>
+                        <p><a href="{{value[3]}}">Go to post!</a></p>
+                        <h10>
+                          <span>Post Context: </span>
+                            <span>{{ value[1] | safe}} </span>
+                            <!-- <span>{{ value[2] }}</span> -->
+                        </h10>
 
                     </div>
                 </div>
