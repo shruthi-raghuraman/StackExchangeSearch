@@ -96,11 +96,3 @@ def search_elastic_index(query, es):
         output_dict[i[0]] = lst_return_values
 
     return output_dict
-
-
-# create a function that returns top-k results with heap structure
-
-# Connects top results to corresponding post information and outputs it
-# to the UI page
-
-# result = es.search(index='stack_exchange_index', body={'query': {'match': {'text': 'languages are we going to face',}}})
