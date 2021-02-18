@@ -16,9 +16,6 @@ This project is a python application. The requirements.txt specifies all the lib
 All services that make up the application in order to start the ElasticSearch cluster are specified in the docker-compose.yml. The dataset is stored as xml files and then parsed into dictionaries. ElasticSearch API python client is utilized to implement the search query. Lastly a Flask server is utilized for the backend.
 
 
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
-
-
 #### Get started
 - Install and run Docker on your laptop:
 > https://hub.docker.com/editions/community/docker-ce-desktop-mac/
@@ -34,7 +31,6 @@ env FLASK_APP=main.py FLASK_ENV=development flask run
 - Wait for ElasticSearch Indexing to complete
 
 #### Search and query
-- To query: go to http://localhost:5000/query 
+- To query: go to http://localhost:5000/query
 - Type in query phrase and press submit
 - Application navigates to http://localhost:5000/search on submit
-
