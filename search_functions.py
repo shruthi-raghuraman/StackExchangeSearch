@@ -59,7 +59,7 @@ def search_elastic_index(query, es):
 
     # Retrieve corresponding display text of each id in the top 10 largest_scores
     post_dict, title_dict, answers_dict = retrieve_xml_post_information()
-    comment_dict = retrieve_xml_comment_information
+    comment_dict = retrieve_xml_comment_information()
     post_processed = {}
 
     # Only store ones with titles

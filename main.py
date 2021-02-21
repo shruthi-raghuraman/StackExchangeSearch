@@ -7,7 +7,7 @@ from search_functions import*
 
 app = Flask(__name__)
 
-#es, es_index = create_elastic_search_index()
+es, es_index = create_elastic_search_index()
 try:
     es = Elasticsearch()
     print("Connected", es.info())
